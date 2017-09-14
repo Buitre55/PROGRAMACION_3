@@ -1,26 +1,34 @@
-edad = 20
+#progama que elabore un programa que guarde una palabra secreta
+#el usuario debe adivinar dicha palabra  secreta.
+#el usuario solo tiene 3 turnos para adivinar la palabra secreta
 
-print(type(edad))
-a = 5
-b = 2
-c = a + b
-d = a - b
-e = 8 * a
-f = 10 / b
-h = a % b
+print ("adivine la palabra secreta tiene 3 intentos")
 
-print ("los resultados fueron :")
-print("c = " + str(c))
-print("c = " + str(d))
-print("e = %d" % d)
-print#("f = "+ str(f) + "\ng =" + str(g))
-print("h = " + str(h) + "\n\n Ciao!")
 
-salario = 2000.75
-print ("El salario de hoy es $%.2f" % salario
+secreta = "pepe"
+secreta2 = "PEPE"
+palabra = input("ingrese palabra")
 
-nombre_completo = "Petra Petrov"
-telefono = '236-5555'
-direcion = """Avenida  Siempre Viva  PH Torre A Apartamento 18Z Panama,Republica de Panama"""
 
-print(nombre_completo, "vive en "+ dirrecion)
+
+
+if palabra == secreta or secreta2:
+    print("correcto")
+
+else:
+    print("aproveche su segundo intento ingrese la palabra")
+    palabra = input("ingrese palabra")
+
+    if palabra == secreta or secreta2:
+        print("correcto")
+
+
+    else:
+        print("aproveche su tercer intento ingrese la palabra")
+        palabra = input("ingrese palabra")
+
+        if palabra == secreta or secreta2:
+            print("correcto")
+
+        else:
+            print("que va eres malo no advinaste en tu tres intentos")
