@@ -1,35 +1,37 @@
-# cree un programa, siguiendo el paradigma de programacion orientada a objetos
-# que permita calcular el volume de una de las figuras geometrico: esfera,cilindro,cono
 
-class Figura(object):
-    pi = 0
-    radio = 0
-    altura = 0
+#rap them
+#tapeth
+#apth
+#wrap/try
+#sap tray
+#87ap9th
+#apothecary
+#aleht   x
+#happy them x
+#tarpth  x
+#apt  x
+#peth  x
+#tarreth  x
+#ddpdg  x
 
-    def __init__(self, altura, radio):
-        self.altura = altura
-        self.radio = radio
+import re
 
-class Esfera(Figura):
-    pi = 3.1416
-    radio_esfera = float(input("RADIO DE ESFERA: "))
-    area_esfera = 4 * pi * radio_esfera ** 2
-    volumen_esfera = (pi * radio_esfera ** 3) / 3
-    print("EL AREA DE LA ESFERA ES: ", area_esfera)
-    print("EL VOLUMEN DE LA ESFERA ES: ", volumen_esfera)
+patron = '[a-z1-9]||[1-9a-z]||[a-z]\w'
+palabras = ['rap them' , 'tapeth' , 'apth' , 'wrap/try' , 'sap try' , '87ap9th' , 'apothecary']
+patron1 = '[.AA]\S'
+palabras1 = ['aleht' , 'happy them' , 'tarpth' , 'apt' , 'peth' , 'tarreth' , 'ddpdg']
 
-print(" ")
-class Cilindro(Figura):
-    pi = 3.1416
-    radio_cilindro = float(input("RADIO DE CILINDRO: "))
-    altura = float(input("DEME ALTURA DE CILINDRO"))
-    area_cilindro = (2 * pi * radio_cilindro) * (radio_cilindro + altura)
-    print("EL VOLUMEN DE EL CILINDRO ES: ", area_cilindro )
 
-print(" ")
-class Cono(Figura):
-    pi = 3.1416
-    radio_cono = float(input("RADIO DEL CONO: "))
-    area = float(input("DEME ALTURA DEL CONO"))
-    area_cono = (((radio_cono ** 2) * pi) * area) / 3
-    print("EL VOLUMEN DE EL CILINDRO ES: ", area_cono )
+for palabra in palabras:
+    if re.search(patron, palabra):
+                print("La palabra " + palabra + " cumple.")
+
+    else:
+                print("La palabra " + palabra + " no cumple.")
+
+for palabra1 in palabras1:
+    if re.search(patron1, palabra1):
+                print("La palabra " + palabra1 + " cumple.")
+
+    else:
+                print("La palabra " + palabra1 + " no cumple.")
